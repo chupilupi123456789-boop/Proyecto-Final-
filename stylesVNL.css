@@ -1,3 +1,9 @@
+:root {
+    --wpv-blue: #0A1E5C;
+    --wpv-red: #FF3B30;
+    --wpv-orange: #FF6B00;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +16,7 @@ body {
     color: white;
 }
 
-:root {
-    --wpv-blue: #0A1E5C;
-    --wpv-red: #FF3B30;
-    --wpv-orange: #FF6B00;
-}
-
+/* Encabezado */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -24,7 +25,7 @@ body {
 
 .Contendor.de.logo {
     display: flex;
-    justify-content: space-between; /*se usa para alinear los elementos hijos entre un contenedor*/
+    justify-content: space-between;
     align-items: center;
     width: 90%;
     margin: auto;
@@ -33,7 +34,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px; /*este se usa para los espacios entre los elementos*/
+    gap: 15px;
 }
 
 .logo-img {
@@ -67,6 +68,7 @@ body {
     font-weight: bold;
 }
 
+/* Contenido principal */
 .ContenidoPrincipal {
     width: 90%;
     margin: 30px auto;
@@ -95,32 +97,75 @@ body {
     margin-bottom: 8px;
 }
 
-.Portada {
-    width: 75%;
-    margin: auto;
-    margin-top: 25px;
+/* Portada horizontal */
+.Portada.WPV.Horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, var(--wpv-blue), var(--wpv-orange), #ffffff);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.Portada .WPV {
-    margin-bottom: 20px;
+.ImagenPortada img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-.Noticias {
+.TextoPortada {
+    max-width: 500px;
+    color: #fff;
+}
+
+.TextoPortada .Noticias {
     background: var(--wpv-orange);
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-.Dia {
-    color: #d4d4d4;
+.TextoPortada h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--wpv-blue);
 }
 
-.Imagen.de.la.portada img {
-    width: 100%;
-    border-radius: 10px;
+.TextoPortada .Dia {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
+.TextoPortada p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.BotonLeerMas {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--wpv-orange);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.BotonLeerMas:hover {
+    background: var(--wpv-blue);
+    color: var(--wpv-orange);
+}
+
+/* Información destacada */
 .Informacion.Destacada {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -144,7 +189,7 @@ body {
 .Informacion.Destacada img {
     width: 100%;
     height: 180px;
-    object-fit: cover; /*rellena el contenedor*/
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -156,7 +201,9 @@ body {
 .Titulo:hover {
     color: var(--wpv-orange);
 }
-@media (max-width: 600px) { /*la condicion que se le impone*/
+
+/* Responsive */
+@media (max-width: 768px) {
 
     .links {
         display: none;
@@ -177,7 +224,20 @@ body {
         width: 95%;
     }
 
+    .Portada.WPV.Horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .TextoPortada {
+        max-width: 100%;
+    }
+
+    .ImagenPortada img {
+        max-width: 90%;
+    }
+
     .Informacion.Destacada {
-        grid-template-columns: 1fr; /*se encarga de distribuir las columnas*/
+        grid-template-columns: 1fr;
     }
 }
