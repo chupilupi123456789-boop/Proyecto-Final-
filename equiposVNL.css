@@ -4,12 +4,65 @@
     --wpv-orange: #FF6B00;
 }
 
+/* ==========================
+        RESET & BODY
+   ========================== */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--wpv-blue);
     color: white;
 }
+
+/* ==========================
+        HEADER VNL
+   ========================== */
+
+.Encabezado {
+    background: var(--wpv-blue);
+    padding: 15px 0;
+    border-bottom: 4px solid var(--wpv-red);
+}
+
+.Contenedor-de-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo-img {
+    width: 140px;
+}
+
+.Centro-de-la-imagen img {
+    width: 100px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.links a:hover,
+.links a.active-link {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
+
+/* ==========================
+        SECCIÓN EQUIPOS
+   ========================== */
 
 .equipos {
     padding: 40px 20px;
@@ -66,4 +119,20 @@ body {
 .equipo:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+            RESPONSIVE
+   ========================== */
+
+@media (max-width: 900px) {
+    .equipo-grid {
+        grid-template-columns: repeat(3, 150px);
+    }
+}
+
+@media (max-width: 600px) {
+    .equipo-grid {
+        grid-template-columns: repeat(2, 150px);
+    }
 }

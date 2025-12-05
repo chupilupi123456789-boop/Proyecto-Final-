@@ -1,0 +1,177 @@
+:root {
+    --wpv-blue: #0A1E5C;
+    --wpv-red: #FF3B30;
+    --wpv-orange: #FF6B00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a10;
+    color: white;
+}
+
+/* ==============================
+        HEADER ESTILO VNL
+   ============================== */
+.Encabezado {
+    background: var(--wpv-blue);
+    padding: 15px 0;
+    border-bottom: 4px solid var(--wpv-red);
+}
+
+.Contenedor-de-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 140px;
+}
+
+.Centro-de-la-imagen img {
+    width: 100px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+.links a:hover {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
+
+.links a.active-link {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
+
+/* ==============================
+        CONTENIDO PRINCIPAL
+   ============================== */
+
+.ContenidoPrincipal {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.Clasificacion h1 {
+    color: var(--wpv-orange);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.BotonesClasificacion {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.BotonesClasificacion .btn {
+    background: var(--wpv-blue);
+    color: white;
+    border: 2px solid var(--wpv-orange);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.BotonesClasificacion .btn:hover {
+    background: var(--wpv-orange);
+    color: var(--wpv-blue);
+}
+
+.BotonesClasificacion .active {
+    background: var(--wpv-orange);
+    color: var(--wpv-blue);
+}
+
+.TablaClasificacion {
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+.TablaClasificacion table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background: #111425;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.TablaClasificacion th,
+.TablaClasificacion td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.TablaClasificacion th {
+    background: var(--wpv-blue);
+    color: white;
+}
+
+.TablaClasificacion tr:hover {
+    background: rgba(255, 107, 0, 0.2);
+}
+
+/* ==============================
+             RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+
+    .links {
+        flex-direction: column;
+        background: var(--wpv-blue);
+        padding: 10px;
+    }
+
+    .links a {
+        margin-bottom: 5px;
+    }
+
+    .logo-img {
+        width: 120px;
+    }
+
+    .Centro-de-la-imagen img {
+        width: 80px;
+    }
+
+    .BotonesClasificacion .btn {
+        margin: 10px 5px;
+        width: 45%;
+    }
+
+    .TablaClasificacion th,
+    .TablaClasificacion td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

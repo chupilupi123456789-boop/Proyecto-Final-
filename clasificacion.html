@@ -4,11 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="clasificacionWPV.css" />
 
 
 
 </head>
 <body>
+
+    <!-- ===========================
+              HEADER (ESTILO VNL)
+         =========================== -->
+    <header class="Encabezado WPV">
+        <div class="Contenedor-de-logo">
+
+            <!-- Logo izquierdo -->
+            <div class="logo">
+                <img src="Gemini_Generated_Image_5gu1js5gu1js5gu1 (1).png" alt="Logo WPV" class="logo-img">
+            </div>
+
+            <!-- Logo central -->
+            <div class="Centro-de-la-imagen">
+                <img src="https://images.volleyballworld.com/image/upload/f_auto/assets/vbw-logos/vbw-video-message.png"
+                     alt="Logo Central">
+            </div>
+
+            <!-- Navegación -->
+            <nav class="links">
+                <a href="calendario.html">Calendario</a>
+                <a href="clasificacion.html" class="active-link">Clasificación</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="estadisticas.html">Estadísticas</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- ===========================
+               CONTENIDO PRINCIPAL
+         =========================== -->
+    <main class="ContenidoPrincipal">
+        <section class="Clasificacion">
+            <h1>Clasificación WPV 2025</h1>
+
+            <div class="BotonesClasificacion">
+                <button class="btn active" onclick="mostrarTabla('masculino')">Masculino</button>
+                <button class="btn" onclick="mostrarTabla('femenino')">Femenino</button>
+            </div>
+
+            <!-- Tabla Masculina -->
+            <div id="masculino" class="TablaClasificacion">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>Jugados</th>
+                            <th>Ganados</th>
+                            <th>Perdidos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Argentina</td><td>18</td><td>6</td><td>6</td><td>0</td></tr>
+                        <tr><td>2</td><td>Brasil</td><td>16</td><td>6</td><td>5</td><td>1</td></tr>
+                        <tr><td>3</td><td>Bulgaria</td><td>14</td><td>6</td><td>4</td><td>2</td></tr>
+                        <tr><td>4</td><td>Canadá</td><td>13</td><td>6</td><td>4</td><td>2</td></tr>
+                        <tr><td>5</td><td>China</td><td>12</td><td>6</td><td>3</td><td>3</td></tr>
+                        <tr><td>6</td><td>Cuba</td><td>11</td><td>6</td><td>3</td><td>3</td></tr>
+                        <tr><td>7</td><td>Países Bajos</td><td>10</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>8</td><td>Japón</td><td>9</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>9</td><td>Italia</td><td>8</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>10</td><td>Irán</td><td>7</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>11</td><td>Alemania</td><td>6</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>12</td><td>Francia</td><td>5</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>13</td><td>Polonia</td><td>4</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>14</td><td>Serbia</td><td>3</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>15</td><td>Eslovenia</td><td>2</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>16</td><td>Turquía</td><td>1</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>17</td><td>Ucrania</td><td>0</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>18</td><td>Estados Unidos</td><td>0</td><td>6</td><td>0</td><td>6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabla Femenina -->
+            <div id="femenino" class="TablaClasificacion" style="display:none;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Equipo</th>
+                            <th>Puntos</th>
+                            <th>Jugados</th>
+                            <th>Ganados</th>
+                            <th>Perdidos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Estados Unidos</td><td>18</td><td>6</td><td>6</td><td>0</td></tr>
+                        <tr><td>2</td><td>Brasil</td><td>16</td><td>6</td><td>5</td><td>1</td></tr>
+                        <tr><td>3</td><td>Argentina</td><td>14</td><td>6</td><td>4</td><td>2</td></tr>
+                        <tr><td>4</td><td>Italia</td><td>13</td><td>6</td><td>4</td><td>2</td></tr>
+                        <tr><td>5</td><td>Japón</td><td>12</td><td>6</td><td>3</td><td>3</td></tr>
+                        <tr><td>6</td><td>China</td><td>11</td><td>6</td><td>3</td><td>3</td></tr>
+                        <tr><td>7</td><td>Bulgaria</td><td>10</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>8</td><td>Francia</td><td>9</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>9</td><td>Canadá</td><td>8</td><td>6</td><td>2</td><td>4</td></tr>
+                        <tr><td>10</td><td>Cuba</td><td>7</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>11</td><td>Países Bajos</td><td>6</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>12</td><td>Irán</td><td>5</td><td>6</td><td>1</td><td>5</td></tr>
+                        <tr><td>13</td><td>Polonia</td><td>4</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>14</td><td>Serbia</td><td>3</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>15</td><td>Eslovenia</td><td>2</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>16</td><td>Turquía</td><td>1</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>17</td><td>Ucrania</td><td>0</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>18</td><td>Alemania</td><td>0</td><td>6</td><td>0</td><td>6</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
 
 
 
