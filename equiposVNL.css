@@ -4,9 +4,6 @@
     --wpv-orange: #FF6B00;
 }
 
-/* ==========================
-        RESET & BODY
-   ========================== */
 
 body {
     margin: 0;
@@ -15,9 +12,6 @@ body {
     color: white;
 }
 
-/* ==========================
-        HEADER VNL
-   ========================== */
 
 .Encabezado {
     background: var(--wpv-blue);
@@ -60,9 +54,6 @@ body {
     font-weight: bold;
 }
 
-/* ==========================
-        SECCIÓN EQUIPOS
-   ========================== */
 
 .equipos {
     padding: 40px 20px;
@@ -120,10 +111,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
-
-/* ==========================
-            RESPONSIVE
-   ========================== */
 
 @media (max-width: 900px) {
     .equipo-grid {

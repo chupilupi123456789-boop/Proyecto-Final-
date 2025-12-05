@@ -16,9 +16,6 @@ body {
     color: white;
 }
 
-/* ==============================
-        HEADER ESTILO VNL
-   ============================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -70,9 +67,6 @@ body {
     font-weight: bold;
 }
 
-/* ==============================
-        CONTENIDO PRINCIPAL
-   ============================== */
 
 .ContenidoPrincipal {
     width: 90%;
@@ -141,9 +135,7 @@ body {
     background: rgba(255, 107, 0, 0.2);
 }
 
-/* ==============================
-             RESPONSIVE
-   ============================== */
+
 @media (max-width: 768px) {
 
     .links {

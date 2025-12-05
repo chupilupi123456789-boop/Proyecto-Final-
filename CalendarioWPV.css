@@ -6,9 +6,6 @@
     --text-light: #ffffff;
 }
 
-/* =====================================
-        RESET Y REGLAS BASE
-   ===================================== */
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +18,6 @@ body {
     color: var(--text-light);
 }
 
-/* =====================================
-            HEADER ESTILO VNL
-   ===================================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -65,9 +59,7 @@ body {
     font-weight: bold;
 }
 
-/* =====================================
-               FECHAS
-   ===================================== */
+
 
 h2.fecha {
     margin: 40px 0 15px 0;
@@ -77,9 +69,6 @@ h2.fecha {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-/* =====================================
-         CONTENEDORES DE PARTIDOS
-   ===================================== */
 
 .Calendario {
     display: flex;
@@ -93,9 +82,7 @@ h2.fecha {
     min-width: 300px;
 }
 
-/* =====================================
-                TABLAS
-   ===================================== */
+
 
 .calendario {
     width: 100%;
@@ -133,9 +120,7 @@ h2.fecha {
     color: var(--wpv-red);
 }
 
-/* =====================================
-              RESPONSIVE
-   ===================================== */
+
 @media (max-width: 768px) {
     .Calendario {
         flex-direction: column;

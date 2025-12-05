@@ -5,7 +5,7 @@
     --text-light: #ffffff;
 }
 
-/* RESET */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +18,7 @@ body {
     color: var(--text-light);
 }
 
-/* =====================================
-        HEADER ESTILO VNL
-   ===================================== */
+
 
 .Encabezado {
     background: var(--wpv-blue);
@@ -62,9 +60,7 @@ body {
     font-weight: bold;
 }
 
-/* =====================================
-            NOTICIAS WPV
-   ===================================== */
+
 
 .noticiasWPV {
     width: 90%;

@@ -16,7 +16,7 @@ body {
     color: white;
 }
 
-/* Encabezado */
+
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -68,7 +68,7 @@ body {
     font-weight: bold;
 }
 
-/* Contenido principal */
+
 .ContenidoPrincipal {
     width: 90%;
     margin: 30px auto;
@@ -97,7 +97,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Portada horizontal */
+
 .Portada.WPV.Horizontal {
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@ body {
     color: var(--wpv-orange);
 }
 
-/* Información destacada */
+
 .Informacion.Destacada {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
