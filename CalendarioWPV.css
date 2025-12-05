@@ -1,0 +1,110 @@
+:root {
+    --wpv-blue: #0A1E5C;
+    --wpv-red: #FF3B30;
+    --wpv-orange: #FF6B00;
+    --text-dark: #222;
+    --text-light: #ffffff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--wpv-blue), var(--wpv-orange), #ffffff);
+    color: var(--text-dark);
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--text-light);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: var(--wpv-orange);
+}
+
+/* Fechas */
+h2.fecha {
+    color: var(--text-light);
+    margin: 30px 0 15px 0;
+    border-left: 5px solid var(--wpv-orange);
+    padding-left: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Rama Masculino/Femenino */
+h3.rama {
+    color: var(--text-light);
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Contenedor de doble columna */
+.Calendario {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que sea responsive */
+}
+
+/* Columnas de partidos */
+.Partidos {
+    flex: 1;
+    min-width: 300px; /* Ajuste para móviles */
+}
+
+/* Tabla */
+.calendario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calendario th, .calendario td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.calendario th {
+    background-color: var(--wpv-orange);
+    color: #fff;
+    font-weight: bold;
+}
+
+.calendario tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.calendario tr:hover {
+    background-color: rgba(255,235,200,0.8);
+}
+
+.calendario td:last-child {
+    font-weight: bold;
+    color: var(--wpv-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Calendario {
+        flex-direction: column;
+    }
+}

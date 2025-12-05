@@ -1,0 +1,111 @@
+:root {
+    --wpv-blue: #0A1E5C;
+    --wpv-orange: #FF6B00;
+    --wpv-red: #FF3B30;
+    --text-light: #ffffff;
+}
+
+/* Sección noticias */
+.noticias {
+    margin: 40px 0;
+}
+
+.noticias h2 {
+    color: var(--text-light);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+}
+
+/* Noticia principal */
+.noticia.principal {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.noticia.principal img {
+    width: 100%;
+    height: auto;
+}
+
+.noticia.principal .contenido {
+    padding: 20px;
+}
+
+.noticia.principal .contenido h3 {
+    color: var(--wpv-blue);
+    margin-bottom: 10px;
+}
+
+.noticia.principal .contenido p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.noticia.principal .contenido a {
+    color: var(--wpv-orange);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noticia.principal .contenido a:hover {
+    text-decoration: underline;
+}
+
+/* Noticias secundarias */
+.noticias-secundarias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.noticias-secundarias .noticia {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.noticias-secundarias .noticia img {
+    width: 100%;
+    height: auto;
+}
+
+.noticias-secundarias .noticia .contenido {
+    padding: 15px;
+}
+
+.noticias-secundarias .noticia .contenido h3 {
+    color: var(--wpv-blue);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.noticias-secundarias .noticia .contenido p {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.noticias-secundarias .noticia .contenido a {
+    color: var(--wpv-orange);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.noticias-secundarias .noticia .contenido a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .noticias-secundarias {
+        flex-direction: column;
+    }
+}
