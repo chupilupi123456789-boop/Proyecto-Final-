@@ -18,6 +18,9 @@ body {
     color: var(--text-light);
 }
 
+
+
+
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -61,6 +64,35 @@ body {
 
 
 
+.BotonesCalendario {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.BotonesCalendario .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid var(--wpv-orange);
+    background-color: var(--wpv-blue);
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.BotonesCalendario .btn:hover {
+    background-color: var(--wpv-orange);
+    border-color: var(--wpv-blue);
+}
+
+.BotonesCalendario .btn.active {
+    background-color: var(--wpv-orange);
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
 h2.fecha {
     margin: 40px 0 15px 0;
     color: var(--text-light);
@@ -68,7 +100,6 @@ h2.fecha {
     padding-left: 10px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
-
 
 .Calendario {
     display: flex;
@@ -82,8 +113,7 @@ h2.fecha {
     min-width: 300px;
 }
 
-
-
+/* Tablas */
 .calendario {
     width: 100%;
     border-collapse: collapse;
@@ -120,7 +150,6 @@ h2.fecha {
     color: var(--wpv-red);
 }
 
-
 @media (max-width: 768px) {
     .Calendario {
         flex-direction: column;
@@ -129,5 +158,10 @@ h2.fecha {
     .links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .BotonesCalendario {
+        flex-direction: column;
+        gap: 10px;
     }
 }
