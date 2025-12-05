@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0a0a10;
+    color: white;
+}
+
+:root {
+    --wpv-blue: #0A1E5C;
+    --wpv-red: #FF3B30;
+    --wpv-orange: #FF6B00;
+}
+
+.Encabezado {
+    background: var(--wpv-blue);
+    padding: 15px 0;
+    border-bottom: 4px solid var(--wpv-red);
+}
+
+.Contendor.de.logo {
+    display: flex;
+    justify-content: space-between; /*se usa para alinear los elementos hijos entre un contenedor*/
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /*este se usa para los espacios entre los elementos*/
+}
+
+.logo-img {
+    width: 140px;
+}
+
+.Logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--wpv-orange);
+}
+
+.Centro.de.la.imagen img {
+    width: 100px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.links a:hover {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
+
+.ContenidoPrincipal {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.ResumenGeneral,
+.UltimasActualizaciones {
+    background: #111425;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.ResumenGeneral h1,
+.UltimasActualizaciones h1 {
+    color: var(--wpv-orange);
+    margin-bottom: 10px;
+}
+
+.UltimasActualizaciones ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.UltimasActualizaciones li {
+    margin-bottom: 8px;
+}
+
+.Portada {
+    width: 75%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.Portada .WPV {
+    margin-bottom: 20px;
+}
+
+.Noticias {
+    background: var(--wpv-orange);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.Dia {
+    color: #d4d4d4;
+}
+
+.Imagen.de.la.portada img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.Informacion.Destacada {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.Informacion.Destacada div {
+    background: #111425;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Informacion.Destacada div:hover {
+    border: 2px solid var(--wpv-orange);
+}
+
+.Informacion.Destacada img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /*rellena el contenedor*/
+    border-radius: 10px;
+}
+
+.Titulo {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.Titulo:hover {
+    color: var(--wpv-orange);
+}
+@media (max-width: 600px) { /*la condicion que se le impone*/
+
+    .links {
+        display: none;
+        flex-direction: column;
+        background: var(--wpv-blue);
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 120px;
+    }
+
+    .Centro.de.la.imagen img {
+        width: 80px;
+    }
+
+    .ContenidoPrincipal {
+        width: 95%;
+    }
+
+    .Informacion.Destacada {
+        grid-template-columns: 1fr; /*se encarga de distribuir las columnas*/
+    }
+}
