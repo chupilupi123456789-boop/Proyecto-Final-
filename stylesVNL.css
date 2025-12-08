@@ -14,6 +14,7 @@
 body {
     background: #0a0a10;
     color: white;
+    font-size: 17px; /* Tamaño base aumentado */
 }
 
 
@@ -42,7 +43,7 @@ body {
 }
 
 .Logo {
-    font-size: 28px;
+    font-size: 26px; /* De 28px a 32px */
     font-weight: bold;
     color: var(--wpv-orange);
 }
@@ -60,7 +61,7 @@ body {
 .links a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 17px; /* De 16px a 18px */
 }
 
 .links a:hover {
@@ -86,6 +87,12 @@ body {
 .UltimasActualizaciones h1 {
     color: var(--wpv-orange);
     margin-bottom: 10px;
+    font-size: 22px; /* Título más grande */
+}
+
+.ResumenGeneral p {
+    font-size: 18px; /* Párrafo más legible */
+    line-height: 1.6;
 }
 
 .UltimasActualizaciones ul {
@@ -94,7 +101,8 @@ body {
 }
 
 .UltimasActualizaciones li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Lista más grande */
 }
 
 
@@ -128,36 +136,37 @@ body {
     background: var(--wpv-orange);
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 15px; /* De 14px a 16px */
     display: inline-block;
     margin-bottom: 10px;
 }
 
 .TextoPortada h1 {
-    font-size: 32px;
+    font-size: 25px; /* De 32px a 36px */
     margin-bottom: 10px;
     color: var(--wpv-blue);
 }
 
 .TextoPortada .Dia {
-    font-size: 18px;
+    font-size: 18px; /* De 18px a 20px */
     margin-bottom: 10px;
 }
 
 .TextoPortada p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 22px; /* De 16px a 18px */
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
 .BotonLeerMas {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 12px 20px; /* Botón un poco más grande */
     background: var(--wpv-orange);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
+    font-size: 19px; /* Texto del botón más grande */
 }
 
 .BotonLeerMas:hover {
@@ -195,7 +204,8 @@ body {
 
 .Titulo {
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 16px; /* De 17px a 19px */
+    line-height: 1.4;
 }
 
 .Titulo:hover {
@@ -204,6 +214,10 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    body {
+        font-size: 16px; /* Mantener legibilidad en móvil */
+    }
 
     .links {
         display: none;
@@ -231,6 +245,10 @@ body {
 
     .TextoPortada {
         max-width: 100%;
+    }
+
+    .TextoPortada h1 {
+        font-size: 28px; /* Ajuste para móvil */
     }
 
     .ImagenPortada img {
