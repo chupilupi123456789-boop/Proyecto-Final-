@@ -1,128 +1,221 @@
-:root {
-    --wpv-blue: #0A1E5C;
-    --wpv-red: #FF3B30;
-    --wpv-orange: #FF6B00;
-}
+        :root {
+            --wpv-blue: #0A1E5C;
+            --wpv-red: #FF3B30;
+            --wpv-orange: #FF6B00;
+        }
 
-* {     
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    background: #0a0a10;
-    color: white;
-}
+        body {
+            background: #0a0a10;
+            color: white;
+        }
 
-.Encabezado {
-    background: var(--wpv-blue);
-    padding: 15px 0;
-    border-bottom: 4px solid var(--wpv-red);
-}
+        .Encabezado {
+            background: var(--wpv-blue);
+            padding: 15px 0;
+            border-bottom: 4px solid var(--wpv-red);
+        }
 
-.ContenedorDeLogo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-}
+        .ContenedorDeLogo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
 
-.logo-img {
-    width: 140px;
-}
+        .logo-img {
+            width: 140px;
+        }
 
-.CentroDeLaImagen img {
-    width: 100px;
-    height: auto;
-}
+        .CentroDeLaImagen img {
+            width: 100px;
+            height: auto;
+        }
 
-.links {
-    display: flex;
-    gap: 20px;
-}
+        .links {
+            display: flex;
+            gap: 20px;
+        }
 
-.links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
+        .links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
 
-.links a:hover,
-.links a.active-link {
-    color: var(--wpv-orange);
-    font-weight: bold;
-}
+        .links a:hover,
+        .links a.active-link {
+            color: var(--wpv-orange);
+            font-weight: bold;
+        }
 
-.TablaDeJugadores {
-    width: 90%;
-    margin: 30px auto;
-}
+        .TablaDeJugadores {
+            width: 90%;
+            margin: 30px auto;
+        }
 
-.Estadisticas h1 {
-    text-align: center;
-    color: var(--wpv-orange);
-    margin-bottom: 25px;
-}
+        .Estadisticas h1 {
+            text-align: center;
+            color: var(--wpv-orange);
+            margin-bottom: 25px;
+        }
 
-/* Tarjetas */
-.TarjetasJugadores {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
+        /* Tarjetas */
+        .TarjetasJugadores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-.Jugador {
-    background: #111425;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
+        .Jugador {
+            background: #111425;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
 
-.Jugador:hover {
-    border: 2px solid var(--wpv-orange);
-}
+        .Jugador:hover {
+            border: 2px solid var(--wpv-orange);
+        }
 
-.Jugador img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+        .Jugador img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-.Jugador h3 {
-    color: var(--wpv-orange);
-    margin-bottom: 5px;
-}
+        .Jugador h3 {
+            color: var(--wpv-orange);
+            margin-bottom: 5px;
+        }
 
-.Pais {
-    font-size: 14px;
-    color: #d4d4d4;
-}
+        .Pais {
+            font-size: 14px;
+            color: #d4d4d4;
+        }
 
-.Posicion {
-    font-size: 13px;
-    color: #ffffff;
-}
+        .Posicion {
+            font-size: 13px;
+            color: #ffffff;
+        }
 
-.Stats {
-    font-size: 13px;
-    margin-top: 5px;
-}
+        .Stats {
+            font-size: 13px;
+            margin-top: 5px;
+        }
 
+        /* Botón Leer más */
+        .btn-leer-mas {
+            background: var(--wpv-orange);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-@media (max-width: 768px) {
-    .TarjetasJugadores {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+        .btn-leer-mas:hover {
+            background: var(--wpv-red);
+            transform: scale(1.05);
+        }
 
-@media (max-width: 480px) {
-    .TarjetasJugadores {
-        grid-template-columns: 1fr;
-    }
-}
+        /* Información expandida */
+        .info-expandida {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--wpv-orange);
+            text-align: left;
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+
+            to {
+                opacity: 1;
+                max-height: 500px;
+            }
+        }
+
+        .detalle {
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .detalle strong {
+            color: var(--wpv-orange);
+        }
+
+        .descripcion-jugador {
+            margin-top: 10px;
+            font-style: italic;
+            color: #d4d4d4;
+            line-height: 1.5;
+        }
+
+        .Jugador.expandido {
+            border: 2px solid var(--wpv-orange);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
+            }
+
+            to {
+                opacity: 1;
+                max-height: 500px;
+            }
+        }
+
+        .detalle {
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .detalle strong {
+            color: var(--wpv-orange);
+        }
+
+        .descripcion-jugador {
+            margin-top: 10px;
+            font-style: italic;
+            color: #d4d4d4;
+            line-height: 1.5;
+        }
+
+        .Jugador.expandido {
+            border: 2px solid var(--wpv-orange);
+        }
+
+        @media (max-width: 768px) {
+            .TarjetasJugadores {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .TarjetasJugadores {
+                grid-template-columns: 1fr;
+            }
+        }
