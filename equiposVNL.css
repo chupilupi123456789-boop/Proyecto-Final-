@@ -2,17 +2,24 @@
     --wpv-blue: #0A1E5C;
     --wpv-red: #FF3B30;
     --wpv-orange: #FF6B00;
+    --text-light: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     background-color: var(--wpv-blue);
-    color: white;
+    color: var(--text-light);
 }
 
-
+/* ===========================
+       HEADER / NAV
+   =========================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -46,15 +53,23 @@ body {
     color: white;
     font-size: 16px;
     padding: 5px 10px;
+    transition: 0.3s;
 }
 
-.links a:hover,
+/* Clase activa para resaltar la página actual */
 .links a.active-link {
     color: var(--wpv-orange);
     font-weight: bold;
 }
 
+.links a:hover {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
 
+/* ===========================
+       EQUIPOS
+   =========================== */
 .equipos {
     padding: 40px 20px;
     text-align: center;
@@ -112,6 +127,9 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
+/* ===========================
+       MEDIA QUERIES
+   =========================== */
 @media (max-width: 900px) {
     .equipo-grid {
         grid-template-columns: repeat(3, 150px);

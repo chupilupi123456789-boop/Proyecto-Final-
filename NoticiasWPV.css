@@ -18,7 +18,7 @@ body {
 }
 
 /* ===========================
-       HEADER
+       HEADER / NAV
    =========================== */
 .Encabezado {
     background: var(--wpv-blue);
@@ -52,10 +52,16 @@ body {
     color: white;
     padding: 5px 10px;
     font-size: 16px;
+    transition: 0.3s;
 }
 
-.links a:hover,
+/* Clase activa para resaltar la página actual */
 .links a.active-link {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
+
+.links a:hover {
     color: var(--wpv-orange);
     font-weight: bold;
 }
@@ -235,5 +241,11 @@ body {
 
     .noticias-secundarias .noticia {
         flex: 1 1 100%;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+        display: none; /* Puedes mostrar con JS menú responsive */
     }
 }

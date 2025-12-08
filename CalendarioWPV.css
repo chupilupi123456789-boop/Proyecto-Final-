@@ -18,9 +18,9 @@ body {
     color: var(--text-light);
 }
 
-
-
-
+/* ===========================
+       HEADER / NAV
+   =========================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -54,16 +54,23 @@ body {
     color: white;
     font-size: 16px;
     padding: 5px 10px;
+    transition: 0.3s;
 }
 
-.links a:hover,
+/* Clase activa para resaltar la página actual */
 .links a.active-link {
     color: var(--wpv-orange);
     font-weight: bold;
 }
 
+.links a:hover {
+    color: var(--wpv-orange);
+    font-weight: bold;
+}
 
-
+/* ===========================
+       BOTONES CALENDARIO
+   =========================== */
 .BotonesCalendario {
     display: flex;
     justify-content: center;
@@ -93,6 +100,9 @@ body {
     font-weight: bold;
 }
 
+/* ===========================
+       TITULOS DE FECHA
+   =========================== */
 h2.fecha {
     margin: 40px 0 15px 0;
     color: var(--text-light);
@@ -101,6 +111,9 @@ h2.fecha {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
+/* ===========================
+       CALENDARIO / TABLAS
+   =========================== */
 .Calendario {
     display: flex;
     gap: 20px;
@@ -113,7 +126,6 @@ h2.fecha {
     min-width: 300px;
 }
 
-/* Tablas */
 .calendario {
     width: 100%;
     border-collapse: collapse;
@@ -150,6 +162,9 @@ h2.fecha {
     color: var(--wpv-red);
 }
 
+/* ===========================
+       MEDIA QUERIES
+   =========================== */
 @media (max-width: 768px) {
     .Calendario {
         flex-direction: column;

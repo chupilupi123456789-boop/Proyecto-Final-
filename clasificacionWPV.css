@@ -2,6 +2,7 @@
     --wpv-blue: #0A1E5C;
     --wpv-red: #FF3B30;
     --wpv-orange: #FF6B00;
+    --text-light: #ffffff;
 }
 
 * {
@@ -13,9 +14,12 @@
 
 body {
     background: #0a0a10;
-    color: white;
+    color: var(--text-light);
 }
 
+/* ===========================
+       HEADER / NAV
+   =========================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -55,6 +59,13 @@ body {
     color: white;
     font-size: 16px;
     padding: 5px 10px;
+    transition: 0.3s;
+}
+
+/* Clase activa para resaltar la página actual */
+.links a.active-link {
+    color: var(--wpv-orange);
+    font-weight: bold;
 }
 
 .links a:hover {
@@ -62,12 +73,9 @@ body {
     font-weight: bold;
 }
 
-.links a.active-link {
-    color: var(--wpv-orange);
-    font-weight: bold;
-}
-
-
+/* ===========================
+       CONTENIDO PRINCIPAL
+   =========================== */
 .ContenidoPrincipal {
     width: 90%;
     margin: 30px auto;
@@ -79,6 +87,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Botones de clasificación */
 .BotonesClasificacion {
     text-align: center;
     margin-bottom: 20px;
@@ -106,6 +115,7 @@ body {
     color: var(--wpv-blue);
 }
 
+/* Tabla de clasificación */
 .TablaClasificacion {
     overflow-x: auto;
     margin-bottom: 40px;
@@ -135,7 +145,9 @@ body {
     background: rgba(255, 107, 0, 0.2);
 }
 
-
+/* ===========================
+       MEDIA QUERIES
+   =========================== */
 @media (max-width: 768px) {
 
     .links {

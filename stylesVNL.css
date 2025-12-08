@@ -14,9 +14,8 @@
 body {
     background: #0a0a10;
     color: white;
-    font-size: 17px; /* Tamaño base aumentado */
+    font-size: 17px;
 }
-
 
 .Encabezado {
     background: var(--wpv-blue);
@@ -24,7 +23,7 @@ body {
     border-bottom: 4px solid var(--wpv-red);
 }
 
-.Contendor.de.logo {
+.ContenedorDeLogo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,12 +42,12 @@ body {
 }
 
 .Logo {
-    font-size: 26px; /* De 28px a 32px */
+    font-size: 26px;
     font-weight: bold;
     color: var(--wpv-orange);
 }
 
-.Centro.de.la.imagen img {
+.CentroDeLaImagen img {
     width: 100px;
     height: auto;
 }
@@ -61,14 +60,15 @@ body {
 .links a {
     text-decoration: none;
     color: white;
-    font-size: 17px; /* De 16px a 18px */
+    font-size: 17px;
+    transition: 0.3s;
 }
 
-.links a:hover {
+.links a:hover,
+.links a.active-link {
     color: var(--wpv-orange);
     font-weight: bold;
 }
-
 
 .ContenidoPrincipal {
     width: 90%;
@@ -87,11 +87,11 @@ body {
 .UltimasActualizaciones h1 {
     color: var(--wpv-orange);
     margin-bottom: 10px;
-    font-size: 22px; /* Título más grande */
+    font-size: 22px;
 }
 
 .ResumenGeneral p {
-    font-size: 18px; /* Párrafo más legible */
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -102,9 +102,8 @@ body {
 
 .UltimasActualizaciones li {
     margin-bottom: 10px;
-    font-size: 18px; /* Lista más grande */
+    font-size: 18px;
 }
-
 
 .Portada.WPV.Horizontal {
     display: flex;
@@ -136,37 +135,37 @@ body {
     background: var(--wpv-orange);
     padding: 5px 10px;
     border-radius: 4px;
-    font-size: 15px; /* De 14px a 16px */
+    font-size: 15px;
     display: inline-block;
     margin-bottom: 10px;
 }
 
 .TextoPortada h1 {
-    font-size: 25px; /* De 32px a 36px */
+    font-size: 25px;
     margin-bottom: 10px;
     color: var(--wpv-blue);
 }
 
 .TextoPortada .Dia {
-    font-size: 18px; /* De 18px a 20px */
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .TextoPortada p {
-    font-size: 22px; /* De 16px a 18px */
+    font-size: 22px;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
 .BotonLeerMas {
     display: inline-block;
-    padding: 12px 20px; /* Botón un poco más grande */
+    padding: 12px 20px;
     background: var(--wpv-orange);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
-    font-size: 19px; /* Texto del botón más grande */
+    font-size: 19px;
 }
 
 .BotonLeerMas:hover {
@@ -174,8 +173,7 @@ body {
     color: var(--wpv-orange);
 }
 
-
-.Informacion.Destacada {
+.InformacionDestacada {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
@@ -183,7 +181,7 @@ body {
     margin: 40px auto;
 }
 
-.Informacion.Destacada div {
+.InformacionDestacada div {
     background: #111425;
     padding: 15px;
     border-radius: 10px;
@@ -191,11 +189,11 @@ body {
     transition: 0.3s;
 }
 
-.Informacion.Destacada div:hover {
+.InformacionDestacada div:hover {
     border: 2px solid var(--wpv-orange);
 }
 
-.Informacion.Destacada img {
+.InformacionDestacada img {
     width: 100%;
     height: 180px;
     object-fit: cover;
@@ -204,7 +202,7 @@ body {
 
 .Titulo {
     margin-top: 10px;
-    font-size: 16px; /* De 17px a 19px */
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -214,9 +212,8 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-
     body {
-        font-size: 16px; /* Mantener legibilidad en móvil */
+        font-size: 16px;
     }
 
     .links {
@@ -230,7 +227,7 @@ body {
         width: 120px;
     }
 
-    .Centro.de.la.imagen img {
+    .CentroDeLaImagen img {
         width: 80px;
     }
 
@@ -248,14 +245,14 @@ body {
     }
 
     .TextoPortada h1 {
-        font-size: 28px; /* Ajuste para móvil */
+        font-size: 28px;
     }
 
     .ImagenPortada img {
         max-width: 90%;
     }
 
-    .Informacion.Destacada {
+    .InformacionDestacada {
         grid-template-columns: 1fr;
     }
 }
