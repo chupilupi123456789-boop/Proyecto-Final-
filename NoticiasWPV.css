@@ -17,9 +17,6 @@ body {
     color: var(--text-light);
 }
 
-/* ===========================
-       HEADER / NAV
-   =========================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -55,20 +52,12 @@ body {
     transition: 0.3s;
 }
 
-/* Clase activa para resaltar la página actual */
-.links a.active-link {
-    color: var(--wpv-orange);
-    font-weight: bold;
-}
-
+.links a.active-link,
 .links a:hover {
     color: var(--wpv-orange);
     font-weight: bold;
 }
 
-/* ===========================
-       NOTICIAS
-   =========================== */
 .noticiasWPV {
     width: 90%;
     margin: 40px auto;
@@ -159,9 +148,7 @@ body {
     text-decoration: none;
 }
 
-/* ===========================
-       POPUP LEER MÁS
-   =========================== */
+/* Popup */
 .popup {
     position: fixed;
     top: 0;
@@ -216,36 +203,53 @@ body {
     background: var(--wpv-red);
 }
 
-/* ===========================
-       MEDIA QUERIES
-   =========================== */
-@media (max-width: 1024px) {
-    .noticias-secundarias .noticia {
-        flex: 1 1 calc(50% - 20px);
-    }
+.Hamburgueza {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; 
+    position: relative;
+}
+
+.Hamburgueza span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff; 
+    border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-    .Contenedor-de-logo {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .noticias-secundarias {
-        flex-direction: column;
-    }
-
-    .noticia.principal img {
-        max-height: 180px;
-    }
-
-    .noticias-secundarias .noticia {
-        flex: 1 1 100%;
+    .Hamburgueza {
+        display: flex;
     }
 
     .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
         flex-direction: column;
-        gap: 10px;
-        display: none; /* Puedes mostrar con JS menú responsive */
+        background-color: var(--wpv-blue);
+        width: 250px;
+        padding: 20px;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000; 
+    }
+
+    .links.active {
+        transform: translateX(0);
+    }
+
+    .links a {
+        color: white;
+        margin: 15px 0;
+        font-size: 18px;
     }
 }
+

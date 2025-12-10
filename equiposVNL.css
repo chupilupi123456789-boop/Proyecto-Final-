@@ -17,9 +17,6 @@ body {
     color: var(--text-light);
 }
 
-/* ===========================
-       HEADER / NAV
-   =========================== */
 .Encabezado {
     background: var(--wpv-blue);
     padding: 15px 0;
@@ -56,7 +53,7 @@ body {
     transition: 0.3s;
 }
 
-/* Clase activa para resaltar la página actual */
+/* Resaltado de la página actual */
 .links a.active-link {
     color: var(--wpv-orange);
     font-weight: bold;
@@ -67,9 +64,6 @@ body {
     font-weight: bold;
 }
 
-/* ===========================
-       EQUIPOS
-   =========================== */
 .equipos {
     padding: 40px 20px;
     text-align: center;
@@ -127,9 +121,60 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
-/* ===========================
-       MEDIA QUERIES
-   =========================== */
+/* Links ocultos en móvil */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.Hamburgueza {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+.Hamburgueza span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white; 
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .Hamburgueza {
+        display: flex;
+    }
+
+    .links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--wpv-blue); 
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .links a {
+        color: white; 
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .links.active {
+        transform: translateX(0);
+    }
+}
+
 @media (max-width: 900px) {
     .equipo-grid {
         grid-template-columns: repeat(3, 150px);
